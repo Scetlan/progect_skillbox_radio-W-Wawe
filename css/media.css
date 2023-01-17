@@ -1,8 +1,19 @@
-/* // Небольшие устройства (телефоны с горизонтальной ориентацией, 576 пикселей и выше) */
-@media (min-width: 576px) { ... }
+:root {
+    --very-dark-shade-blue: #121723;
+    --ebony: #292e39;
+    --mischka: #A1A6B4;
+    --fog: #D2D5DD;
+    --solitude: #E6E8EC;
+    --medium_dark_shade_cyan-blue: #0039A6;
+    --buff: #F0D288;
+    --boston-blue: #BB973E;
+    --harley-davidson-orange: #D52B1E;
+    --garfield: #4F28A5;
+    --blue-violet: #6D31EE;
+    --very-soft-blue: #AA9DFA;
+    --alice-blu: #F5F6F7;
+    --fff: #fff;
 
-/* // Средние устройства (планшеты, 768 пикселей и выше) */
-@media (min-width: 768px) { ... }
+    --indent-margin: 30px;
+}
 
-/* // Большие устройства (настольные компьютеры, 992 пикселей и выше) */
-@media (min-width: 992px) { ... }
