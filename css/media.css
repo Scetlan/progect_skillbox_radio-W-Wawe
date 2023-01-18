@@ -17,3 +17,70 @@
     --indent-margin: 30px;
 }
 
+@media (max-width:1400px) {
+    .container {
+        width: 824px;
+    }
+
+    .header__panel  {
+        background-color: var(--solitude);
+    }
+
+    .header__panel-logo {
+        margin: auto;
+        margin-left: 0;
+        padding: 23px 0;
+    }
+
+    .header__panel-login {
+        margin: auto;
+        margin-right: 0;
+    }
+
+    .header__panel {
+        display: block;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .nav__item-all {
+        margin-right: 27px;
+    }
+
+    .live__btn {
+        width: 150px;
+    }
+
+    .header__lower-live.live {
+        margin: auto;
+        margin-right: 0;
+    }
+
+    .header__lower-age {
+        display: none;
+    }
+
+    .ether__content {
+        max-width: 67%;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .ether__microphone {
+        width:33%;
+    }
+
+    .ether__desc {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width:900px) {
+    
+}
+
+@media (max-width:500px) {
+    
+}

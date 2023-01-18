@@ -148,6 +148,14 @@ img {
     display: none;
 }
 
+.eader__panel-login {
+    display: none;
+}
+
+.header__panel-login {
+    display: none;
+}
+
 .header__menu {
     padding-top: 18px;
     padding-bottom: 14px;
@@ -178,7 +186,7 @@ img {
 }
 
 .nav__item:not(:last-child) {
-    margin-right: 57.75px;
+    margin-right: 58.75px;
 }
 
 .header__burger {
@@ -186,7 +194,7 @@ img {
 }
 
 .header__search {
-    margin-right: 22px;
+    margin-right: 16px;
 }
 
 .header__button {
@@ -222,16 +230,28 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    margin-right: 52px;
+    margin-right: 53px;
 }
 
+.header__lower-live {
+    margin: auto;
+    margin-left: 0;
+}
 
 .live {
-    display: flex;
-    border-left: 1px solid var(--solitude);
-    padding-left: 12px;
+    padding: 13px 0;
 }
 
+.live__btn {
+    width: 173px;
+    border-left: 1px solid var(--solitude);
+    border-right: 1px solid var(--solitude);
+    padding: 0 11px;
+}
+
+.live__desc {
+    margin-left: 6px;
+}
 
 .nav__item-desc {
     display: flex;
@@ -250,9 +270,9 @@ img {
     color: var(--very-dark-shade-blue);
 }
 
-.nav__item-btn {
-    padding: 0;
-    width: 30px;
+.header__lower-age {
+    margin: 0 auto;
+    margin-right: 0;
 }
 
 
@@ -263,13 +283,15 @@ img {
 
     margin: auto;
     margin-right: 0;
-    padding: 15px 8px;
+    padding: 14px 9px;
 
     background-color: var(--solitude);
 }
 
-.nav__item-age {
+.age__desc {
+    display: flex;
     padding: 7px 4.5px;
+    text-align: center;
 
     color: var(--mischka);
 
@@ -302,6 +324,7 @@ img {
 .ether__microphone {
     margin: auto;
     margin-right: 0;
+
 }
 
 .ether__title span {
@@ -526,6 +549,10 @@ img {
 }
 
 .choices__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+
     color: var(--very-dark-shade-blue);
 }
 
@@ -547,7 +574,7 @@ img {
 }
 
 .broadcast__archive-btn {
-    padding: 12px 56px;
+    padding: 11px 56px;
     margin-bottom: 12px;
 
     background-color: transparent;
@@ -591,9 +618,7 @@ img {
 }
 
 .broadcast__list-card {
-    width: 255px;
     height: 100%;
-    margin-top: 10px;
     border: 2px solid var(--solitude);
 }
 
@@ -658,6 +683,7 @@ img {
 }
 
 .guests__list {
+    width: 66%;
     margin-right: 30px;
 }
 
@@ -665,9 +691,7 @@ img {
     position: relative;
 }
 
-.accordion {
-    width: 66%;
-}
+.accordion {}
 
 
 .guests__accordion-list {
@@ -762,7 +786,7 @@ img {
 
 
 .guests__map {
-    width: 30%;
+    width: 31%;
 }
 
 .guests__map-title {
@@ -788,7 +812,7 @@ img {
     font-size: 16px;
     line-height: 180%;
 
-    margin-bottom: var(--indent-margin);
+    margin-bottom: 45px;
 
     color: var(--mischka);
 }
