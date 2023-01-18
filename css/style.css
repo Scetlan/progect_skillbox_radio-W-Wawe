@@ -434,8 +434,7 @@ img {
 }
 
 .podcasts__content {
-    padding: 24px 30px;
-    flex-direction: column;
+    padding: 24px 0 24px 30px;
 }
 
 .podcasts__item-time {
@@ -770,12 +769,17 @@ img {
     margin-top: 30px;
 }
 
-.accordion__title:hover>.accordion__title-svg {
-    transform: rotate(90%);
+.columns {
+    columns: 4;
+    column-gap: 30px;
 }
 
-.ac-panel__list {
-    margin-right: 30px;
+.ac-list {
+    margin-right: 0;
+}
+
+.accordion__title:hover>.accordion__title-svg {
+    transform: rotate(90%);
 }
 
 .ac-panel__item {

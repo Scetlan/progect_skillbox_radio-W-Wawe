@@ -22,7 +22,7 @@
         width: 824px;
     }
 
-    .header__panel  {
+    .header__panel {
         background-color: var(--solitude);
     }
 
@@ -69,18 +69,43 @@
     }
 
     .ether__microphone {
-        width:33%;
+        width: 33%;
     }
 
     .ether__desc {
         margin-bottom: 22px;
     }
-}
 
-@media (max-width:900px) {
+    .broadcast__list-item {
+        margin: 0;
+        margin-right: 29px;
+    }
+
+    .broadcast__list-item:nth-child(3n) {
+        margin-right: 29px;
+    }
+
+    .broadcast__list-item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .broadcast__list-item:nth-last-child(n+3) {
+        margin-bottom: 26px;
+    }
+
+    .guests__text {
+        max-width: 538px;
+    }
+
+    .columns {
+        columns: 3;
+        column-gap: 30px;
+    }
+
+    
     
 }
 
-@media (max-width:500px) {
-    
-}
+@media (max-width:900px) {}
+
+@media (max-width:500px) {}
