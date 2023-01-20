@@ -119,8 +119,8 @@
 
     .playlists__radio {
         position: relative;
-        min-width: 35%;
-        margin-bottom: 35px;
+        min-width: 38%;
+        margin-bottom: 31px;
         padding-right: 0;
     }
     
@@ -150,30 +150,70 @@
     .playlists__radio-info {
         display: block;
         padding-top: 34px;
-        border-top: 1px solid var(--fog);
     }
 
     .playlists__executor-container {
         display: flex;
     }
 
+    .playlists__executor-container,
+    .playlists__executor {
+        width: 255px;
+    }
 
+    .playlists__executor {
+        max-height: 113px;
+        margin-right: 29px;
+        margin-bottom: var(--indent-margin);
+    }
+
+    source {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .playlists__executor:nth-child(4n) {
+        margin-right: 29px;
+    }
+
+    .playlists__executor:nth-child(3n) {
+        margin-right: 0px;
+    }
+
+    .playlists__executor-text {
+        padding: 0;
+        margin: auto 0;
+        margin-left: 10px;
+    }
+
+
+    .product__content {
+        width: 48%;
+    }
     
     .info__spiral {
         display: none;
     }
 
     .info__content {
-        width: 70%;
+        width: 72%;
     }
 
     .info__dawn {
-        width: 30%;
+        width: 34%;
     }
 
+    .swiper-title {
+        margin-top: 30px;
+    }
 
     .info__swiper {
         width: 824px;
+    }
+
+    .swiper-button-one,
+    .swiper-button-two {
+        top: 20%;
     }
 
     .swiper-card {
@@ -187,6 +227,11 @@
     .flex__width-one,
     .flex__width-two {
         min-width: 47%;
+    }
+
+    .swiper-slide__img {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width:900px) {}
