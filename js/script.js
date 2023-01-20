@@ -11,17 +11,17 @@ podcastBtn.addEventListener('click', () => {
 
 const element = document.querySelector('.broadcast__selectCustom');
 const choices = new Choices(element, {
-	searchEnabled: false,
-	itemSelectText: '',
-	shouldSort: false,
-	position: 'bottom'
+    searchEnabled: false,
+    itemSelectText: '',
+    shouldSort: false,
+    position: 'bottom'
 });
 
 // Accordion
 new Accordion('.accordion__container');
 
 
- //swiper
+//swiper
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 4,
     spaceBetween: 30,
@@ -31,4 +31,18 @@ const swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-two',
         prevEl: '.swiper-button-one',
     },
+    breakpoints: {// настройки для разных разрешений
+        824: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        // 991: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 30
+        // },
+        // 1192: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 20
+        // }
+    }
 });

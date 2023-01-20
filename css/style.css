@@ -830,10 +830,26 @@ img {
 }
 
 /*playlists*/
-.playlists__container {}
 
 .playlists__list-title {
     margin-bottom: 12px;
+}
+
+.playlists__radio {
+    width: 35%;
+
+    padding-right: 34px;
+}
+
+.playlists__radio-destop {
+    color: var(--mischka);
+
+    padding-top: 38px;
+    border-top: 1px solid var(--fog);
+}
+
+.playlists__radio-info {
+    display: none;
 }
 
 .playlists__list-desc {
@@ -846,19 +862,61 @@ img {
     color: var(--mischka);
 }
 
-.radio {
-    margin-bottom: 38px;
-
-    border-bottom: 1px solid var(--fog);
-}
-
 .radio__item {
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
 
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
+
+.radio__custom {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio__span {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.radio__span::before {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    margin-right: 14px;
+    border: 2px solid var(--mischka);
+    border-radius: 50%;
+}
+
+.radio__span::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_70850_137)'%3E%3Ccircle cx='15' cy='15' r='13' fill='%236D31EE'/%3E%3Cg filter='url(%23filter0_d_70850_137)'%3E%3Ccircle cx='15' cy='15' r='6' fill='white'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_70850_137' x='4' y='4' width='22' height='22' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset/%3E%3CfeGaussianBlur stdDeviation='2.5'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.119541 0 0 0 0 0.0511111 0 0 0 0 0.266667 0 0 0 0.8 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_70850_137'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_70850_137' result='shape'/%3E%3C/filter%3E%3CclipPath id='clip0_70850_137'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.radio__custom:checked + .radio__span::after{
+    display: block;
+}
+
+.radio__custom:focus + .radio__span::before{
+    display: block;
+}
+
 
 .playlists__radio-desc {
     font-weight: 400;
@@ -883,13 +941,22 @@ img {
 }
 
 .span__age {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
     padding: 7px 4.5px;
 
     border: 1px solid var(--mischka);
     border-radius: 100px;
 }
 
+.playlists__radio-desc {
+    font-size: 16px;
+    line-height: 22px;
+}
+
 .playlists__list-content {
+    width: 69%;
     flex-wrap: wrap;
 }
 
@@ -1033,7 +1100,7 @@ img {
 }
 
 .info__content {
-    width: 58%;
+    width: 66%;
 }
 
 .info__title {
