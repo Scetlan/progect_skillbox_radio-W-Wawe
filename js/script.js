@@ -32,6 +32,11 @@ const swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-one',
     },
     breakpoints: {// настройки для разных разрешений
+        1600: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+
         824: {
             slidesPerView: 2,
             spaceBetween: 30,

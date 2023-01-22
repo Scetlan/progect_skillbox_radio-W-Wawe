@@ -168,7 +168,7 @@ img {
     margin-bottom: 30px;
 }
 
-.entry__desc-span {
+.entry__desc-link {
     color: var(--blue-violet);
 }
 
