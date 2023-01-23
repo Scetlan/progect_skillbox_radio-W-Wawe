@@ -123,7 +123,7 @@
         margin-bottom: 31px;
         padding-right: 0;
     }
-    
+
     .radio__item {
         width: 330px;
         margin: 0;
@@ -141,6 +141,8 @@
 
     .playlists__list-content {
         width: 100%;
+
+        border-bottom: 1px solid var(--fog);
     }
 
     .playlists__radio-destop {
@@ -171,7 +173,7 @@
         width: 100%;
         height: 100%;
     }
-    
+
     .playlists__executor:nth-child(4n) {
         margin-right: 29px;
     }
@@ -190,7 +192,7 @@
     .product__content {
         width: 48%;
     }
-    
+
     .info__spiral {
         display: none;
     }
@@ -234,6 +236,70 @@
     }
 }
 
-@media (max-width:900px) {}
+@media (max-width:1000px) {
+    .container {
+        width: 540px;
+    }
+
+
+    .ether__content {
+        max-width: 100%;
+    }
+
+    .ether__microphone {
+        display: none;
+    }
+
+
+    .podcasts__item {
+        width: 100%;
+        margin-right: 0;
+
+        margin-bottom: 25px;
+    }
+
+    .broadcast__filter {
+        margin-right: 0;
+        margin-bottom: 47px;
+    }
+
+    .broadcast__select {
+        width: 255px;
+    }
+
+    .choices__inner {
+        min-height: 40px;
+    }
+
+    .choices[data-type*=select-one] .choices__inner {
+        padding-bottom: 0;
+    }
+
+    .choices__list--single {
+        padding: 2px 16px 4px 4px;
+    }
+
+    .podcasts__article {
+        height: 96%;
+    }
+
+    .podcasts__item-date {
+        bottom: 5px;
+    }
+
+
+    .broadcast__container {
+        flex-direction: column;
+    }
+
+    .broadcast__archive {
+        display: none;
+    }
+
+    .broadcast__archive-botton {
+        display: flex;
+
+    }
+}
 
 @media (max-width:500px) {}
