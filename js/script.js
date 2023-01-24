@@ -1,3 +1,23 @@
+//бургер меню
+
+
+
+//поиск
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    document.getElementById('open-search-form').addEventListener('click', (e) => {
+        document.getElementById('search-form').classList.add('search-form__show')
+    });
+
+    document.getElementById('search-form-close').addEventListener('click', (e) => {
+        document.getElementById('search-form').classList.remove('search-form__show')
+
+        document.getElementById('search-form').addEventListener('submit', (e) => {
+            e.preventDefault()
+        })
+    })
+})
+
 // кнопка еще
 const podcastBtn = document.querySelector('.podcasts__button');
 const podcastsItems = document.querySelectorAll('.podcasts__item');
@@ -50,4 +70,25 @@ const swiper = new Swiper('.swiper-container', {
         //     spaceBetween: 20
         // }
     }
+});
+
+
+let acPanelBtn = document.querySelectorAll('.ac-panel__btn');
+let guestsMapItem = document.querySelectorAll('.guests__map-item');
+
+
+acPanelBtn.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        const path = e.currentTarget.dataset.path;
+
+        acPanelBtn.forEach(function (btn) { btn.classList.remove('ac-panel__btn--active') });
+        e.currentTarget.classList.add('ac-panel__btn--active');
+
+        guestsMapItem.forEach(
+            function (element) {
+                element.classList.remove('guests__map-item--active')
+            }
+        );
+        document.querySelector(`[data-target=${path}]`).classList.add('guests__map-item--active');
+    });
 });

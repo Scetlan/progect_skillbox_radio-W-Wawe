@@ -28,30 +28,27 @@
             <div class="header__panel">
                 <div class="header__panel-blog container flex">
                     <a class="header__panel-logo" href="#" aria-label="логотип компании">
-                        <img src="./img/header/hea_logo.svg" class="header__log" alt="Логотип W-Wave Radio">
-                    </a>
-                    <a class="header__panel-login" href="#">Вход</a>
-                </div>
-            </div>
-            <div class="header__menu">
-                <div class="container flex">
-                    <a class="header__logo" href="#" aria-label="логотип компании">
                         <picture>
-                            <source srcset="./img/teacher/Rectangle_768_1.jpg" media="(max-width: )">
+                            <source srcset="./img/logo__adaptive.svg" media="(max-width: 1600px)">
                             <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                             <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                             <img src="./img/header/hea_logo.svg" alt="Логотип W-Wave Radio">
                         </picture>
                     </a>
-                    <button class="header__burger button" aria-label="открыть меню">
-                        <svg class="burger" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect class="burger__line" width="24" height="3" rx="1.5" fill="#6D31EE" />
-                            <rect class="burger__line" y="21" width="24" height="3" rx="1.5" fill="#6D31EE" />
-                            <rect class="burger__line" y="11" width="24" height="3" rx="1.5" fill="#6D31EE" />
-                        </svg>
+                    <a class="header__panel-login" href="./entry.html">Вход</a>
+                </div>
+            </div>
+            <div class="header__menu">
+                <div class="container header__menu-burger flex">
+                    <a class="header__logo" href="#" aria-label="логотип компании">
+                        <img src="./img/header/hea_logo.svg" alt="Логотип W-Wave Radio">
+                    </a>
+                    <button class="header__burger button" aria-label="меню">
+                        <span class="header__burger-line"></span>
+                        <span class="header__burger-line"></span>
+                        <span class="header__burger-line"></span>
                     </button>
-                    <nav class="header__nav nav" title="Главное меню">
+                    <nav class="header__nav nav blog-list" title="Главное меню">
                         <ul class="nav__list list-container">
                             <li class="nav__item">
                                 <a href="#podcasts">Подкасты</a>
@@ -69,14 +66,11 @@
                                 <a href="#info">О нас</a>
                             </li>
                         </ul>
+                        <div class="nav__burger-spiral spiral-one"></div>
+                        <div class="nav__burger-spiral spiral-two"></div>
                     </nav>
-                    <button class="header__burger" aria-label="меню">
-                        <span class="header__burger-line"></span>
-                        <span class="header__burger-line"></span>
-                        <span class="header__burger-line"></span>
-                    </button>
                     <div class="header__button flex">
-                        <button class="header__search button">
+                        <button class="header__search button" id="open-search-form" aria-label="Поиск">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -86,7 +80,36 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-                        <a class="header__button-login" href="#">Вход</a>
+                        <form action="" class="header__button-search search-form" id="search-form">
+                            <!-- не забыть указать action -->
+                            <div class="search-form__contsiner">
+                                <input class="search-form__input" type="text" placeholder="Поиск по сайту">
+                                <button class="search-form__send button" id="search-form-send" type="submit"
+                                    aria-label="Поиск">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                                            stroke="#6D31EE" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M20.9999 21L16.6499 16.65" stroke="#6D31EE" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button class="search-form__close button" id="search-form-close" type="submit"
+                                    aria-label="скрыть">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291"
+                                            transform="rotate(45 8.9541 7.30432)" fill="#CACACA" />
+                                        <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291"
+                                            transform="rotate(-45 7.30469 15.5524)" fill="#CACACA" />
+                                        <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <a class="header__button-login" href="./entry.html">Вход</a>
                     </div>
                 </div>
             </div>
@@ -229,7 +252,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">11&nbsp;июня</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/2-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/2-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-2.jpg" alt="">
@@ -290,7 +314,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">8&nbsp;июня</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/3-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/3-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-3.jpg" alt="">
@@ -351,7 +376,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">5&nbsp;июня</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/4-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/4-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-4.jpg" alt="">
@@ -412,7 +438,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">2&nbsp;июня</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/5-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/5-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-5.jpg" alt="">
@@ -473,7 +500,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">28&nbsp;мая</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/6-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/6-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-6.jpg" alt="">
@@ -534,7 +562,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">22&nbsp;мая</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/7-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/7-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-7.jpg" alt="">
@@ -657,7 +686,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">2&nbsp;июня</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/5-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/5-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-5.jpg" alt="">
@@ -718,7 +748,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">28&nbsp;мая</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/6-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/6-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-6.jpg" alt="">
@@ -779,7 +810,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">22&nbsp;мая</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/7-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/7-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-7.jpg" alt="">
@@ -840,7 +872,8 @@
                         <article class="podcasts__article flex">
                             <p class="podcasts__item-date">18&nbsp;мая</p>
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/8-podcasts.jpg" media="(max-width: 1000px)">
+                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/8-podcasts.jpg"
+                                    media="(max-width: 1000px)">
                                 <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-8.jpg" alt="">
@@ -933,8 +966,6 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_768_1.jpg"
-                                    media="(max-width: 992px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
                                     media="(max-width: 768px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
@@ -957,8 +988,6 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_768_1.jpg"
-                                    media="(max-width: 992px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
                                     media="(max-width: 768px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
@@ -981,8 +1010,6 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_768_1.jpg"
-                                    media="(max-width: 992px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
                                     media="(max-width: 768px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
@@ -1005,8 +1032,6 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_768_1.jpg"
-                                    media="(max-width: 992px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
                                     media="(max-width: 768px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
@@ -1029,8 +1054,6 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_768_1.jpg"
-                                    media="(max-width: 992px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
                                     media="(max-width: 768px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
@@ -1053,8 +1076,6 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_768_1.jpg"
-                                    media="(max-width: 992px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
                                     media="(max-width: 768px)">
                                 <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
@@ -1647,6 +1668,7 @@
                             Услышимся!:)</p>
                     </div>
                     <div class="info__spiral"></div>
+                    <div class="info__turned-helix"></div>
                     <div class="info__dawn"></div>
                 </div>
                 <!--yt vjq -->
