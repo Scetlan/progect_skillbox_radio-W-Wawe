@@ -1,6 +1,10 @@
 //бургер меню
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("burger").addEventListener('click', function() {
+        document.querySelector("header").classList.toggle("open")
+    })
+});
 
 //поиск
 
@@ -57,18 +61,10 @@ const swiper = new Swiper('.swiper-container', {
             spaceBetween: 30,
         },
 
-        824: {
+        300: {
             slidesPerView: 2,
             spaceBetween: 30,
         },
-        // 991: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 30
-        // },
-        // 1192: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 20
-        // }
     }
 });
 

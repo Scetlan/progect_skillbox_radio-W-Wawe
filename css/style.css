@@ -197,6 +197,10 @@ img {
     margin-right: 58.75px;
 }
 
+.nav__ether {
+    display: none;
+}
+
 .header__burger {
     display: none;
 }
@@ -246,7 +250,7 @@ img {
     margin-right: 0;
 }
 
-.header__button-login {
+.login {
     display: flex;
     align-items: center;
     text-align: center;
@@ -309,6 +313,10 @@ img {
 
     color: var(--garfield);
     background-color: transparent;
+}
+
+.btn-play {
+    display: block;
 }
 
 .header__lower-live {
@@ -1691,7 +1699,7 @@ img {
 
 .flex__width-one,
 .flex__width-two {
-    max-width: 445px;
+    width: 445px;
 }
 
 .form__blog {

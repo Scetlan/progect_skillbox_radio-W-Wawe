@@ -29,13 +29,12 @@
                 <div class="header__panel-blog container flex">
                     <a class="header__panel-logo" href="#" aria-label="логотип компании">
                         <picture>
+                            <source srcset="./img/logo_320.svg" media="(max-width: 700px)">
                             <source srcset="./img/logo__adaptive.svg" media="(max-width: 1600px)">
-                            <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                            <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                             <img src="./img/header/hea_logo.svg" alt="Логотип W-Wave Radio">
                         </picture>
                     </a>
-                    <a class="header__panel-login" href="./entry.html">Вход</a>
+                    <a class="header__panel-login login" href="./entry.html">Вход</a>
                 </div>
             </div>
             <div class="header__menu">
@@ -43,12 +42,12 @@
                     <a class="header__logo" href="#" aria-label="логотип компании">
                         <img src="./img/header/hea_logo.svg" alt="Логотип W-Wave Radio">
                     </a>
-                    <button class="header__burger button" aria-label="меню">
+                    <button class="header__burger button" id="burger" aria-label="меню">
                         <span class="header__burger-line"></span>
                         <span class="header__burger-line"></span>
                         <span class="header__burger-line"></span>
                     </button>
-                    <nav class="header__nav nav blog-list" title="Главное меню">
+                    <nav class="header__nav nav blog-list spiral-one spiral-two" title="Главное меню">
                         <ul class="nav__list list-container">
                             <li class="nav__item">
                                 <a href="#podcasts">Подкасты</a>
@@ -66,8 +65,6 @@
                                 <a href="#info">О нас</a>
                             </li>
                         </ul>
-                        <div class="nav__burger-spiral spiral-one"></div>
-                        <div class="nav__burger-spiral spiral-two"></div>
                     </nav>
                     <div class="header__button flex">
                         <button class="header__search button" id="open-search-form" aria-label="Поиск">
@@ -109,7 +106,7 @@
                                 </button>
                             </div>
                         </form>
-                        <a class="header__button-login" href="./entry.html">Вход</a>
+                        <a class="header__button-login login" href="./entry.html">Вход</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +132,26 @@
                             <li class="nav__item-all">
                                 <a class="nav__item-link" href="#">Реклама</a>
                             </li>
+                            <li class="nav__item-all btn-play">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+                                        fill="#A1A6B4" />
+                                </svg>
+                            </li>
                         </ul>
+                        <div class="nav__ether container">
+                            <div class="nav__ether-content flex">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE" />
+                                    <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white" />
+                                    <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white" />
+                                </svg>
+                                <p class="nav__ether-desc">Что в эфире?</p>
+                            </div>
+                        </div>
                     </nav>
                     <div class="header__lower-live live flex">
                         <button class="live__btn button">
@@ -1137,16 +1153,16 @@
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
                                     <li class="ac-panel__item"><a href="">Константин Прусино</a></li>
                                     <li class="ac-panel__item"><a href="">Иван Калитников</a></li>
+                                    <li class="ac-panel__item"><a href="">Денис Тельман</a></li>
                                     <li class="ac-panel__item"><a href="">Евгений Войновский</a></li>
                                     <li class="ac-panel__item"><a href="">Ольга Мартынова</a></li>
                                     <li class="ac-panel__item"><a href="">Дмитрий Михалок</a></li>
                                     <li class="ac-panel__item"><a href="">Пётр Пиотровский</a></li>
+                                    <li class="ac-panel__item"><a href="">Юрий Горин</a></li>
                                     <li class="ac-panel__item"><a href="">Олег Свиридовский</a></li>
                                     <li class="ac-panel__item"><a href="">Владислав Кауперс</a></li>
                                     <li class="ac-panel__item"><a href="">Михаил Пожитников</a></li>
                                     <li class="ac-panel__item"><a href="">Георгий Полуян</a></li>
-                                    <li class="ac-panel__item"><a href="">Денис Тельман</a></li>
-                                    <li class="ac-panel__item"><a href="">Юрий Горин</a></li>
                                     <li class="ac-panel__item"><a href="">Максим Сергеев</a></li>
                                 </ul>
                             </div>
@@ -1604,8 +1620,8 @@
             <div class="product__container container flex">
                 <div class="product__radio svg ">
                     <picture class="svg__radio">
+                        <source srcset="./img/product/radio_768.svg" media="(max-width: 600px)">
                         <source srcset="./img/product/radio_1024.svg" media="(max-width: 1600px)">
-                        <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                         <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                         <img src="./img/product/radio.svg" alt="">
                     </picture>
@@ -1679,8 +1695,8 @@
                             <!-- слайды -->
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
+                                    <source srcset="./img/info/people/768/card_1.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_one.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-1.jpg" alt="Дмитрий Гутенберг">
                                 </picture>
@@ -1689,8 +1705,8 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
+                                    <source srcset="./img/info/people/card-2.jpg" media="(max-width: 900px)">
                                     <source srcset="./img/info/people/1024/card_two.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-2.jpg" alt="Анна Васильева">
                                 </picture>
@@ -1700,8 +1716,8 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
+                                    <source srcset="./img/info/people/card-3.jpg" media="(max-width: 900px)">
                                     <source srcset="./img/info/people/1024/card_three.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-3.jpg" alt="Пётр Дмитриевский">
                                 </picture>
@@ -1710,8 +1726,8 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
+                                    <source srcset="./img/info/people/card-4.jpg" media="(max-width: 900px)">
                                     <source srcset="./img/info/people/1024/card_four.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-4.jpg" alt="Татьяна Флеганова">
                                 </picture>
@@ -1720,8 +1736,8 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
+                                    <source srcset="./img/info/people/card-5.jpg" media="(max-width: 900px)">
                                     <source srcset="./img/info/people/1024/card_five.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-5.jpg" alt="Фёдор Прокопьев">
                                 </picture>
@@ -1730,8 +1746,8 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
+                                    <source srcset="./img/info/people/card-6.jpg" media="(max-width: 900px)">
                                     <source srcset="./img/info/people/1024/card_six.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-6.jpg" alt="Светлана Кортнева">
                                 </picture>
@@ -1855,7 +1871,7 @@
     <script src="js/accordion/accordion.min.js"></script>
     <script src="js/choices.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 
 </body>
 
