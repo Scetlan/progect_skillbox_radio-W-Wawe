@@ -316,7 +316,7 @@ img {
 }
 
 .btn-play {
-    display: block;
+    display: none;
 }
 
 .header__lower-live {
