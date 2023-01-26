@@ -33,6 +33,7 @@
     }
 
     .header__panel-login {
+        display: none;
         margin: auto;
         margin-right: 0;
     }
