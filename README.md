@@ -1,2 +1,2 @@
-# progect_skillbox_radio-W-Wawe
+# radio W-Wawe
 Данный проект находится в разработке.
