@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
     <noscript>
         <style>
             .simplebar-content-wrapper {
@@ -13,7 +14,6 @@
         </style>
     </noscript>
     <link rel="stylesheet" href="css/choices.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="js/accordion/accordion.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,9 +24,9 @@
 
 <body>
     <header class="header">
-        <div class="header__container flex">
+        <div class="header__container">
             <div class="header__panel">
-                <div class="header__panel-blog container flex">
+                <div class="header__panel-blog container">
                     <a class="header__panel-logo" href="#" aria-label="логотип компании">
                         <picture>
                             <source srcset="./img/logo_320.svg" media="(max-width: 700px)">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="header__menu">
-                <div class="container header__menu-burger flex">
+                <div class="container header__menu-burger">
                     <a class="header__logo" href="#" aria-label="логотип компании">
                         <img src="./img/header/hea_logo.svg" alt="Логотип W-Wave Radio">
                     </a>
@@ -66,7 +66,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="header__button flex">
+                    <div class="header__button">
                         <button class="header__search button" id="open-search-form" aria-label="Поиск">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -111,9 +111,9 @@
                 </div>
             </div>
             <div class="header__lower-menu">
-                <div class="container flex">
+                <div class="container header__lower-contsiner">
                     <nav class="header__nav nav">
-                        <ul class="nav__list-all list-container flex">
+                        <ul class="nav__list-all list-container">
                             <li class="nav__item-all">
                                 <a class="nav__item-link" href="#">Новости</a>
                             </li>
@@ -142,30 +142,32 @@
                             </li>
                         </ul>
                         <div class="nav__ether container">
-                            <div class="nav__ether-content flex">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE" />
-                                    <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white" />
-                                    <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white" />
-                                </svg>
-                                <p class="nav__ether-desc">Что в эфире?</p>
+                            <div class="nav__ether-content">
+                                <button class="nav__ether-btn air button">
+                                    <svg class="air__svg" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE" />
+                                        <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white" />
+                                        <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white" />
+                                    </svg>
+                                    <span class="air__text">Что в эфире?</span>
+                                </button>
                             </div>
                         </div>
                     </nav>
-                    <div class="header__lower-live live flex">
+                    <div class="header__lower-live live">
                         <button class="live__btn button">
                             <img src="./img/header/play.svg" alt="Слушать">
                             <div class="live__desc">
-                                <p class="nav__item-desc">Ранее&nbsp;в&nbsp;эфире</p>
-                                <p class="nav__item-text">«Музыка»</p>
+                                <p class="live__desc-ether">Ранее&nbsp;в&nbsp;эфире</p>
+                                <p class="live__desc-text">«Музыка»</p>
                             </div>
                         </button>
                         <button class="live__btn button">
                             <img src="./img/header/play.svg" alt="Слушать">
                             <div class="live__desc">
-                                <p class="nav__item-desc">Сейчас&nbsp;в эфире</p>
-                                <p class="nav__item-text ">«Как так?»</p>
+                                <p class="live__desc-ether">Сейчас&nbsp;в эфире</p>
+                                <p class="live__desc-text ">«Как так?»</p>
                             </div>
                         </button>
                     </div>
@@ -181,7 +183,7 @@
 
     <main class="main">
         <section class="main__section ether">
-            <div class="ether__container container flex">
+            <div class="ether__container container">
                 <div class="ether__content">
                     <h1 class="ether__title"><span>Радио</span> W-Wave</h1>
                     <p class="ether__desc">Привет, на&nbsp;связи W-Wawe! Раньше мы&nbsp;были <a class="ether__desc-link"
@@ -191,29 +193,27 @@
                         Здесь, помимо прямого эфира&nbsp;&mdash; архив передач и&nbsp;многое другое:)</p>
                     <button class="ether__btn button">Слушать эфир</button>
                 </div>
-                <img class="ether__microphone img" src="./img/ether/microphone.svg" alt="">
+                <img class="ether__microphone img" src="./img/ether/microphone.png" alt="">
             </div>
         </section>
 
         <section class="main__section podcasts">
             <div class="podcasts__container podcasts-all container">
                 <h2 class="podcasts__title font-title">Подкасты</h2>
-                <ul class="podcasts__list list-container flex">
+                <ul class="podcasts__list list-container">
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">14&nbsp;июня</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/1-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source srcset="./img/podcasts/320/podcasts-1-320.jpg"
+                                    media="(max-width: 680px)">
+                                <source srcset="./img/podcasts/768/1-podcasts.jpg"
                                     media="(max-width: 1000px)" sizes="100%">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
-                                    media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" class="podcasts__item-img"
+                                <img class="podcasts__article-pic" class="podcasts__item-img"
                                     src="./img/podcasts/podcasts-1.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">15:43</p>
                                         <h3 class="podcasts__title-two">Европа. XIX век</h3>
@@ -231,8 +231,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -241,7 +241,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">258</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -250,7 +250,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">104</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -265,17 +265,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">11&nbsp;июня</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/2-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-2-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/2-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-2.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">5:32</p>
                                         <h3 class="podcasts__title-two">О&nbsp;музыке</h3>
@@ -293,8 +293,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -303,7 +303,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">207</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -312,7 +312,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">34</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -327,17 +327,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">8&nbsp;июня</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/3-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/3-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-3.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">8:54</p>
                                         <h3 class="podcasts__title-two">Люди сегодня</h3>
@@ -355,8 +355,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -365,7 +365,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">104</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -374,7 +374,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">54</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -389,17 +389,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">5&nbsp;июня</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/4-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-4-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/4-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-4.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">9:04</p>
                                         <h3 class="podcasts__title-two">Хэллоу, Африка!</h3>
@@ -417,8 +417,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -427,7 +427,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">87</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -436,7 +436,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">44</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -451,17 +451,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">2&nbsp;июня</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/5-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/5-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-5.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">7:03</p>
                                         <h3 class="podcasts__title-two">Обо всём</h3>
@@ -479,8 +479,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -489,7 +489,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">64</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -498,7 +498,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">30</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -513,17 +513,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">28&nbsp;мая</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/6-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/6-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-6.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">9:15</p>
                                         <h3 class="podcasts__title-two">Физика цвета</h3>
@@ -541,8 +541,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -551,7 +551,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">58</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -560,7 +560,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">29</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -575,17 +575,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">22&nbsp;мая</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/7-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/7-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-7.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">16:04</p>
                                         <h3 class="podcasts__title-two">Источник звука</h3>
@@ -603,8 +603,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -613,7 +613,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">55</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -622,7 +622,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">20</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -637,17 +637,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">18&nbsp;мая</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/8-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/8-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-8.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">6:55</p>
                                         <h3 class="podcasts__title-two">Правила этикета</h3>
@@ -665,8 +665,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -675,7 +675,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">24</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -684,7 +684,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">54</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -699,17 +699,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">2&nbsp;июня</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/5-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/5-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-5.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">7:03</p>
                                         <h3 class="podcasts__title-two">Обо всём</h3>
@@ -727,8 +727,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -737,7 +737,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">64</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -746,7 +746,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">30</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -761,17 +761,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">28&nbsp;мая</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/6-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/6-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-6.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">9:15</p>
                                         <h3 class="podcasts__title-two">Физика цвета</h3>
@@ -789,8 +789,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -799,7 +799,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">58</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -808,7 +808,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">29</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -823,17 +823,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">22&nbsp;мая</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/7-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/7-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-7.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">16:04</p>
                                         <h3 class="podcasts__title-two">Источник звука</h3>
@@ -851,8 +851,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -861,7 +861,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">55</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -870,7 +870,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">20</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -885,17 +885,17 @@
                         </article>
                     </li>
                     <li class="podcasts__item">
-                        <article class="podcasts__article flex">
+                        <article class="podcasts__article">
                             <p class="podcasts__item-date">18&nbsp;мая</p>
-                            <picture>
-                                <source class="broadcast__list_pic" srcset="./img/podcasts/768/8-podcasts.jpg"
+                            <picture class="podcasts__article-picture">
+                                <source class="podcasts__article-pic" srcset="./img/podcasts/320/podcasts-3-320.jpg"
+                                media="(max-width: 680px)">
+                                <source class="podcasts__item-pic" srcset="./img/podcasts/768/8-podcasts.jpg"
                                     media="(max-width: 1000px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                                <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="podcasts__item-img" src="./img/podcasts/podcasts-8.jpg" alt="">
                             </picture>
                             <div class="podcasts__item-blog">
-                                <div class="podcasts__item-part flex">
+                                <div class="podcasts__item-part">
                                     <div class="podcasts__content">
                                         <p class="podcasts__item-time">6:55</p>
                                         <h3 class="podcasts__title-two">Правила этикета</h3>
@@ -913,8 +913,8 @@
                                     </button>
                                 </div>
                                 <div class="podcasts__actions">
-                                    <ul class="podcasts__actions-list list-container flex">
-                                        <li class="podcasts__actions-item flex">
+                                    <ul class="podcasts__actions-list list-container">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="10" height="13"
                                                 viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -923,7 +923,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">24</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="13" height="12"
                                                 viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -932,7 +932,7 @@
                                             </svg>
                                             <p class="podcasts__actions-desc">54</p>
                                         </li>
-                                        <li class="podcasts__actions-item flex">
+                                        <li class="podcasts__actions-item">
                                             <svg class="podcasts__actions-svg" width="12" height="13"
                                                 viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -952,8 +952,8 @@
         </section>
 
         <section class="main__section broadcast">
-            <div class="broadcast__container flex container">
-                <div class="broadcast__filter flex">
+            <div class="broadcast__container container">
+                <div class="broadcast__filter">
                     <div class="broadcast__author">
                         <h2 class="broadcast__author-title font-title">Передачи</h2>
                         <p class="broadcast__author-desc">Автор:</p>
@@ -966,9 +966,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="broadcast__archive flex">
+                    <div class="broadcast__archive">
                         <div class="broadcast__archive-pic">
-                            <img class="broadcast__archive-img" src="./img/mic.svg" alt="Микрофон">
+                            <img class="broadcast__archive-img" src="./img/mic.png" alt="Микрофон">
                         </div>
                         <div class="broadcast__archive-content">
                             <button class="broadcast__archive-btn">Архив</button>
@@ -978,15 +978,15 @@
                         </div>
                     </div>
                 </div>
-                <ul class="broadcast__list list-container flex">
+                <ul class="broadcast__list list-container">
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
-                                    media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" src="./img/broadcast/image_1.jpg" alt="">
+                                <source class="broadcast__list-pic" srcset="./img/broadcast/broadcast-320-1.jpg"
+                                media="(max-width: 680px)">
+                                <source class="broadcast__list-pic" srcset="./img/broadcast/broadcast-768-1.jpg"
+                                    media="(max-width: 1000px)">
+                                <img class="broadcast__list-pic" src="./img/broadcast/image_1.jpg" alt="">
                             </picture>
                             <div class="broadcast__list-content">
                                 <h3 class="broadcast__list-title">О&nbsp;людях и&nbsp;книгах</h3>
@@ -1004,11 +1004,11 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
+                                <source class="broadcast__list-pic" srcset="../img/broadcast/broadcast-768-2.jpg"
+                                    media="(max-width: 1000px)">
+                                <source class="broadcast__list-pic" srcset="./img/teacher/Rectangle_320_1.jpg"
                                     media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" src="./img/broadcast/image_2.jpg" alt="">
+                                <img class="broadcast__list-pic" src="./img/broadcast/image_2.jpg" alt="">
                             </picture>
                             <div class="broadcast__list-content">
                                 <h3 class="broadcast__list-title">Графомания td</h3>
@@ -1026,11 +1026,11 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
+                                <source class="broadcast__list-pic" srcset="../img/broadcast/broadcast-768-3.jpg"
+                                    media="(max-width: 1000px)">
+                                <source class="broadcast__list-pic" srcset="./img/teacher/Rectangle_320_1.jpg"
                                     media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" src="./img/broadcast/image_3.jpg" alt="">
+                                <img class="broadcast__list-pic" src="./img/broadcast/image_3.jpg" alt="">
                             </picture>
                             <div class="broadcast__list-content">
                                 <h3 class="broadcast__list-title">Не&nbsp;Рим, не&nbsp;Троя</h3>
@@ -1048,11 +1048,11 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
+                                <source class="broadcast__list-pic" srcset="./img/broadcast/broadcast-768-4.jpg"
+                                    media="(max-width: 1000px)">
+                                <source class="broadcast__list-pic" srcset="./img/teacher/Rectangle_320_1.jpg"
                                     media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" src="./img/broadcast/image_4.jpg" alt="">
+                                <img class="broadcast__list-pic" src="./img/broadcast/image_4.jpg" alt="">
                             </picture>
                             <div class="broadcast__list-content">
                                 <h3 class="broadcast__list-title">Эрудит</h3>
@@ -1070,11 +1070,11 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
+                                <source class="broadcast__list-pic" srcset="./img/broadcast/broadcast-768-5.jpg"
+                                    media="(max-width: 1000px)">
+                                <source class="broadcast__list-pic" srcset="./img/teacher/Rectangle_320_1.jpg"
                                     media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" src="./img/broadcast/image_5.jpg" alt="">
+                                <img class="broadcast__list-pic" src="./img/broadcast/image_5.jpg" alt="">
                             </picture>
                             <div class="broadcast__list-content">
                                 <h3 class="broadcast__list-title">Тонкости эпох</h3>
@@ -1092,11 +1092,11 @@
                     <li class="broadcast__list-item">
                         <div class="broadcast__list-card">
                             <picture>
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_578_1.jpg"
-                                    media="(max-width: 768px)">
-                                <source class="broadcast__list_pic" srcset="./img/teacher/Rectangle_320_1.jpg"
+                                <source class="broadcast__list-pic" srcset="./img/broadcast/broadcast-768-6.jpg"
+                                    media="(max-width: 1000px)">
+                                <source class="broadcast__list-pic" srcset="./img/teacher/Rectangle_320_1.jpg"
                                     media="(max-width: 576px)">
-                                <img class="broadcast__list_pic" src="./img/broadcast/image_6.jpg" alt="">
+                                <img class="broadcast__list-pic" src="./img/broadcast/image_6.jpg" alt="">
                             </picture>
                             <div class="broadcast__list-content">
                                 <h3 class="broadcast__list-title">Живые мысли</h3>
@@ -1112,9 +1112,9 @@
                         </div>
                     </li>
                 </ul>
-                <div class="broadcast__archive-botton flex">
+                <div class="broadcast__archive-botton">
                     <div class="broadcast__archive-pic">
-                        <img class="broadcast__archive-img" src="./img/mic.svg" alt="Микрофон">
+                        <img class="broadcast__archive-img" src="./img/mic.png" alt="Микрофон">
                     </div>
                     <div class="broadcast__archive-content">
                         <button class="broadcast__archive-btn">Архив</button>
@@ -1134,7 +1134,7 @@
                     <p class="guests__text">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные
                         и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
                 </div>
-                <div class="guests__content-accordion accordion flex">
+                <div class="guests__content-accordion accordion">
                     <ul class="guests__list list-container accordion__container" aria-labelledby="questions">
                         <li class="accordion__dropdown ac">
                             <h3 class="accordion__subtitle dropdown title ac-header">
@@ -1147,7 +1147,7 @@
                                     </svg>
                                 </button>
                             </h3>
-                            <div class="ac-panel accordion__dropdown-desc flex">
+                            <div class="ac-panel accordion__dropdown-desc">
                                 <ul class="ac-panel__list columns list-container">
                                     <li class="ac-panel__item"><a href="">Сергей Денисов</a></li>
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
@@ -1177,7 +1177,7 @@
                                             stroke-linecap="square" />
                                     </svg></button>
                             </h3>
-                            <div class="ac-panel accordion__dropdown-desc flex">
+                            <div class="ac-panel accordion__dropdown-desc">
                                 <ul class="ac-panel__list columns list-container">
                                     <li class="ac-panel__item"><a href="">Сергей Денисов</a></li>
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
@@ -1208,7 +1208,7 @@
                                     </svg>
                                 </button>
                             </h3>
-                            <div class="ac-panel accordion__dropdown-desc flex">
+                            <div class="ac-panel accordion__dropdown-desc">
                                 <ul class="ac-panel__list columns list-container">
                                     <li class="ac-panel__item"><a href="">Сергей Денисов</a></li>
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
@@ -1238,7 +1238,7 @@
                                             stroke-linecap="square" />
                                     </svg></button>
                             </h3>
-                            <div class="ac-panel accordion__dropdown-desc flex">
+                            <div class="ac-panel accordion__dropdown-desc">
                                 <ul class="ac-panel__list columns list-container">
                                     <li class="ac-panel__item"><a href="">Сергей Денисов</a></li>
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
@@ -1269,7 +1269,7 @@
                                     </svg>
                                 </button>
                             </h3>
-                            <div class="ac-panel accordion__dropdown-desc flex">
+                            <div class="ac-panel accordion__dropdown-desc">
                                 <ul class="ac-panel__list columns list-container">
                                     <li class="ac-panel__item"><a href="">Сергей Денисов</a></li>
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
@@ -1300,7 +1300,7 @@
                                     </svg>
                                 </button>
                             </h3>
-                            <div class="ac-panel accordion__dropdown-desc flex">
+                            <div class="ac-panel accordion__dropdown-desc">
                                 <ul class="ac-panel__list columns list-container">
                                     <li class="ac-panel__item"><a href="">Сергей Денисов</a></li>
                                     <li class="ac-panel__item"><a href="">Матвей Мечников</a></li>
@@ -1323,7 +1323,7 @@
                     </ul>
                     <div class="guests__map">
                         <img class="guests__map-title" src="./img/guests/plug.jpg" alt="">
-                        <ul class="guests__map-list list-container flex">
+                        <ul class="guests__map-list list-container">
                             <li class="guests__map-social">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1364,7 +1364,7 @@
         </section>
 
         <section class="main__section playlists">
-            <div class="playlists__container flex container">
+            <div class="playlists__container container">
                 <div class="playlists__radio">
                     <h2 class="playlists__list-title font-title">Плейлисты</h2>
                     <p class="playlists__list-desc">Жанр</p>
@@ -1422,16 +1422,15 @@
                         <p class="playlists__radio-desc">Раздел &laquo;Плейлисты&raquo; может содержать информацию,
                             не&nbsp;предназначенную для несовершеннолетних</p>
                         <p class="playlists__radio-desc desc">&copy;&nbsp;2021&nbsp;l W-Wave</p>
-                        <p class="playlists__radio-desc desc__age"><span class="span__age">18+</span></p>
+                        <p class="playlists__radio-desc desc-age"><span class="span-age">18+</span></p>
                     </div>
                 </div>
-                <ul class="playlists__list-content flex list-container">
+                <ul class="playlists__list-content list-container">
                     <li class="playlists__executor">
                         <div class="playlists__executor-container">
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-1.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-1.jpg" alt="">
                             </picture>
@@ -1446,7 +1445,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-2.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-2.jpg" alt="">
                             </picture>
@@ -1461,7 +1459,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-3.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-3.jpg" alt="">
                             </picture>
@@ -1476,7 +1473,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-4.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-4.jpg" alt="">
                             </picture>
@@ -1491,7 +1487,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-5.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-5.jpg" alt="">
                             </picture>
@@ -1506,7 +1501,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-6.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-6.jpg" alt="">
                             </picture>
@@ -1521,7 +1515,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-7.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-7.jpg" alt="">
                             </picture>
@@ -1536,7 +1529,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-8.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-8.jpg" alt="">
                             </picture>
@@ -1551,7 +1543,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-9.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-9.jpg" alt="">
                             </picture>
@@ -1566,7 +1557,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-10.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-10.jpg" alt="">
                             </picture>
@@ -1581,7 +1571,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-11.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-11.jpg" alt="">
                             </picture>
@@ -1596,7 +1585,6 @@
                             <picture>
                                 <source srcset="./img/playlists/1024-768/playlists__executor-img-12.jpg"
                                     media="(max-width: 1600px)">
-                                <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
                                 <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                 <img class="playlists__executor-img" src="./img/playlists/executor-12.jpg" alt="">
                             </picture>
@@ -1611,24 +1599,23 @@
                     <p class="playlists__radio-desc">Раздел &laquo;Плейлисты&raquo; может содержать информацию,
                         не&nbsp;предназначенную для несовершеннолетних</p>
                     <p class="playlists__radio-desc desc">&copy;&nbsp;2021&nbsp;l W-Wave</p>
-                    <p class="playlists__radio-desc desc__age"><span class="span__age">18+</span></p>
+                    <p class="playlists__radio-desc desc-age"><span class="span-age">18+</span></p>
                 </div>
             </div>
         </section>
 
         <section class="main__section product">
-            <div class="product__container container flex">
+            <div class="product__container container">
                 <div class="product__radio svg ">
                     <picture class="svg__radio">
-                        <source srcset="./img/product/radio_768.svg" media="(max-width: 600px)">
-                        <source srcset="./img/product/radio_1024.svg" media="(max-width: 1600px)">
+                        <source srcset="./img/product/radio_768.png" media="(max-width: 600px)">
+                        <source srcset="./img/product/radio_1024.png" media="(max-width: 1600px)">
                         <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
-                        <img src="./img/product/radio.svg" alt="">
+                        <img src="./img/product/radio.png" alt="">
                     </picture>
                     <picture class="product__radio-new">
-                        <source srcset="./img/product/new_1024.svg" media="(max-width: 1600px)">
-                        <source srcset="./img/teacher/Rectangle_578_1.jpg" media="(max-width: 768px)">
-                        <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
+                        <source srcset="./img/product/new_1024.svg" media="(max-width: 1600px)
+                        <source srcset=" ./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                         <img src="./img/product/new.svg" alt="">
                     </picture>
                 </div>
@@ -1673,7 +1660,7 @@
 
         <section class="main__section info">
             <div class="info__container">
-                <div class="info__all container flex">
+                <div class="info__all container">
                     <div class="info__content">
                         <h2 class="info__title font-title">О&nbsp;нас</h2>
                         <p class="info__text">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!</p>
@@ -1697,7 +1684,7 @@
                                 <picture class="swiper-slide__img">
                                     <source srcset="./img/info/people/768/card_1.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_one.jpg" media="(max-width: 1600px)">
-                                    <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
+                                    <source srcset="./img/info/people/768/card_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-1.jpg" alt="Дмитрий Гутенберг">
                                 </picture>
                                 <h3 class="swiper-title">Дмитрий Гутенберг</h3>
@@ -1705,7 +1692,7 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
-                                    <source srcset="./img/info/people/card-2.jpg" media="(max-width: 900px)">
+                                    <source srcset="./img/info/people/768/card_2.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_two.jpg" media="(max-width: 1600px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-2.jpg" alt="Анна Васильева">
@@ -1716,7 +1703,7 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
-                                    <source srcset="./img/info/people/card-3.jpg" media="(max-width: 900px)">
+                                    <source srcset="./img/info/people/768/card_3.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_three.jpg" media="(max-width: 1600px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-3.jpg" alt="Пётр Дмитриевский">
@@ -1726,7 +1713,7 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
-                                    <source srcset="./img/info/people/card-4.jpg" media="(max-width: 900px)">
+                                    <source srcset="./img/info/people/768/card_4.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_four.jpg" media="(max-width: 1600px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-4.jpg" alt="Татьяна Флеганова">
@@ -1736,7 +1723,7 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
-                                    <source srcset="./img/info/people/card-5.jpg" media="(max-width: 900px)">
+                                    <source srcset="./img/info/people/768/card_5.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_five.jpg" media="(max-width: 1600px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-5.jpg" alt="Фёдор Прокопьев">
@@ -1746,7 +1733,7 @@
                             </div>
                             <div class="swiper-slide swiper-card">
                                 <picture class="swiper-slide__img">
-                                    <source srcset="./img/info/people/card-6.jpg" media="(max-width: 900px)">
+                                    <source srcset="./img/info/people/768/card_6.jpg" media="(max-width: 1000px)">
                                     <source srcset="./img/info/people/1024/card_six.jpg" media="(max-width: 1600px)">
                                     <source srcset="./img/teacher/Rectangle_320_1.jpg" media="(max-width: 576px)">
                                     <img src="./img/info/people/card-6.jpg" alt="Светлана Кортнева">
@@ -1780,13 +1767,13 @@
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="info__form form"
                         aria-labelledby="tac">
                         <div class="form__content">
-                            <div class="form__data flex">
+                            <div class="form__data">
                                 <textarea class="form__input textarea" name="comment"
                                     placeholder="Что скажете?"></textarea>
-                                <div class="flex__width ">
-                                    <input class="form__input flex__width-one" type="text" name="name" placeholder="Имя"
+                                <div class="form__data-width ">
+                                    <input class="form__input form__data-one" type="text" name="name" placeholder="Имя"
                                         required>
-                                    <input class="form__input flex__width-two" type="email" name="email"
+                                    <input class="form__input form__data-two" type="email" name="email"
                                         placeholder="Email" required>
                                 </div>
                             </div>
@@ -1794,9 +1781,8 @@
                                 <div class="form__blog">
                                     <button class="form__btn">Отправить</button>
                                     <label class="form__checkbox" for="consent">
-                                        <input class="checkbox__custom" type="checkbox" name="genre" id="consent"
-                                            required>
-                                        <span class="checkbox__span">Согласен на обработку персональных
+                                        <input class="form__custom" type="checkbox" name="genre" id="consent" required>
+                                        <span class="form__span">Согласен на обработку персональных
                                             данных</span>
                                     </label>
                                 </div>
@@ -1810,11 +1796,11 @@
 
     <footer class="footer">
         <div class="footer__top">
-            <div class="footer__container container flex">
+            <div class="footer__container container">
                 <div class="footer__social">
                     <img class="footer__social-logo" src="./img/footer/logo.svg" alt="">
-                    <ul class="footer__social-list list-container social flex">
-                        <li class="social__item flex">
+                    <ul class="footer__social-list list-container social">
+                        <li class="social__item">
                             <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -1844,7 +1830,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__links flex">
+                <div class="footer__links">
                     <ul class="footer__link list-container">
                         <li class="footer__link-item"><a href="">Подкасты</a></li>
                         <li class="footer__link-item"><a href="">Передачи</a></li>
@@ -1863,7 +1849,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer__desc container flex">
+        <div class="footer__desc container">
             <p class="container__desc">W-WAVE &reg; 2021</p>
         </div>
     </footer>
