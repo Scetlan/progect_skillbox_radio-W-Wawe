@@ -1,3 +1,27 @@
+//бургер меню
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("burger").addEventListener('click', function() {
+        document.querySelector("header").classList.toggle("open")
+    })
+});
+
+//поиск
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    document.getElementById('open-search-form').addEventListener('click', (e) => {
+        document.getElementById('search-form').classList.add('search-form__show')
+    });
+
+    document.getElementById('search-form-close').addEventListener('click', (e) => {
+        document.getElementById('search-form').classList.remove('search-form__show')
+
+        document.getElementById('search-form').addEventListener('submit', (e) => {
+            e.preventDefault()
+        })
+    })
+})
+
 // кнопка еще
 const podcastBtn = document.querySelector('.podcasts__button');
 const podcastsItems = document.querySelectorAll('.podcasts__item');
@@ -10,61 +34,57 @@ podcastBtn.addEventListener('click', () => {
 //select
 
 const element = document.querySelector('.broadcast__selectCustom');
-
 const choices = new Choices(element, {
     searchEnabled: false,
-    itemSelectText: ""
-})
+    itemSelectText: '',
+    shouldSort: false,
+    position: 'bottom'
+});
 
 // Accordion
-new Accordion('.accordion');
-
+new Accordion('.accordion__container');
 
 
 //swiper
-// const swiper = new Swiper('.swiper-container', {
-//     slidesPerView: 4,
-//     spaceBetween: 30,
-//     loop: true,
-//     // пагинация
-//     pagination: {
-//         el: '.swiper-pagination',
-//     },
-//     // навигация
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-// });
-
-let swiper = new Swiper('.swiper-container', {
-    direction: 'horizontal',
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4,
+    spaceBetween: 30,
     loop: true,
-    rewind: true,
-  
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  
-  breakpoints: {
-  
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+    // навигация
+    navigation: {
+        nextEl: '.swiper-button-two',
+        prevEl: '.swiper-button-one',
     },
-  
-  
-  
-    992: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-  
-    1200: {
-      spaceBetween: 30,
-      slidesPerView: 4,
-    },
-  },
-  });
+    breakpoints: {// настройки для разных разрешений
+        1600: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
 
+        300: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+    }
+});
+
+
+let acPanelBtn = document.querySelectorAll('.ac-panel__btn');
+let guestsMapItem = document.querySelectorAll('.guests__map-item');
+
+
+acPanelBtn.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+        const path = e.currentTarget.dataset.path;
+
+        acPanelBtn.forEach(function (btn) { btn.classList.remove('ac-panel__btn--active') });
+        e.currentTarget.classList.add('ac-panel__btn--active');
+
+        guestsMapItem.forEach(
+            function (element) {
+                element.classList.remove('guests__map-item--active')
+            }
+        );
+        document.querySelector(`[data-target=${path}]`).classList.add('guests__map-item--active');
+    });
+});
